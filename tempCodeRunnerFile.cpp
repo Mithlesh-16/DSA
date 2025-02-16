@@ -1,3 +1,2 @@
-if(pow==1){
-    //     return base;
-    // }
+
+    // d.pop_front();

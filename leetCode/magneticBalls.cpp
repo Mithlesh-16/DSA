@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
     int maxDistance(vector<int>& position, int m) {
@@ -36,3 +37,7 @@ public:
         return ans;
     }
 };
+int main(){
+    cout<<"Done";
+    return 0;
+}
