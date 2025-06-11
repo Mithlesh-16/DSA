@@ -1,22 +1,19 @@
 {
     "configurations": [
         {
-            "name": "Linux",
+            "name": "Win64",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/include",
-                "/usr/include/c++/13",
-                "/usr/include/x86_64-linux-gnu/c++/13",
-                "/usr/include/c++/13/backward"
-                // "usr/lib/gcc/x86_64-linux-gnu/13/include",
-                // "usr/local/include"
-
+                "C:/mingw_15/mingw64/include",
+                "C:/mingw_15/mingw64/include/c++/15.1.0",
+                "C:/mingw_15/mingw64/include/c++/15.1.0/x86_64-w64-mingw32",
+                "C:/mingw_15/mingw64/include/c++/15.1.0/backward"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/g++",
+            "compilerPath": "C:/mingw_15/mingw64/bin/g++.exe",
             "cStandard": "c11",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "linux-gcc-x64"
+            "cppStandard": "c++20",
+            "intelliSenseMode": "windows-gcc-x64"
         }
     ],
     "version": 4

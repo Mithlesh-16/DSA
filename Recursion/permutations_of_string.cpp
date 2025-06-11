@@ -13,6 +13,10 @@ void str_permut(string str, int &i){
         str[(j + 1)] = c;
         
         str_permut(str, ++i);
+        //backtracking
+         char c = str[j];
+        str[j] = str[j + 1];
+        str[(j + 1)] = c;
     }
 }
 
