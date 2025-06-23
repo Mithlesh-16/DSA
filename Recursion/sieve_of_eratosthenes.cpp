@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
 
-    // finding no. of natural no which are prime numbers in O(log n) time complexity
+    // finding no. of prime numbers in O(log n) time complexity
     // sieve of eratosthenes
 
     long long int n;
