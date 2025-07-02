@@ -16,6 +16,7 @@ class ListNode{
         ~ListNode(){
             cout<<"deleted node having value : "<<this -> val<<endl;
         }
+
 };
 
 //Done through the iterative method
@@ -33,9 +34,21 @@ ListNode* reverse_LL(ListNode* &head){
 }
 
 //Done through the Recursive Method
-ListNode* reverse_LL_recurisvely(ListNode* head){
+void reverse_LL_recursively(ListNode* head, ListNode* prev, ListNode* &ans){
+    //base case
+    if(head == nullptr){
+        ans = prev;
+        return;
+    }
+    ListNode* curr = head;
 
-    return head;
+    ListNode* next_node = head -> next;
+    curr -> next = prev;
+    prev = curr;
+    head = next_node;
+
+    //recursive call
+    reverse_LL_recursively(curr, prev, ans);
 }
 
 int main() {
