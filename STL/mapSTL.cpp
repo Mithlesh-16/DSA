@@ -5,6 +5,10 @@
 using namespace std;
 int main(){
     map<int,string> m;
+    for(auto i:m){
+        cout<<"entered here!! "<<endl;
+        cout<<i.first<<" "<<i.second<<endl;
+    }
     m[1] ="babbar";
     
     m[2] = "love";

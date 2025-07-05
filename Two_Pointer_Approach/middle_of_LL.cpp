@@ -28,6 +28,7 @@ class Solution{
         
         ListNode* fast = head -> next;
         ListNode* slow = head;
+        
         while(fast != nullptr){
             slow = slow -> next;
             fast = fast -> next;
