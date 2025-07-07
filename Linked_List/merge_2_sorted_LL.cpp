@@ -83,7 +83,60 @@ public:
     }
 };
 
+
+// Done by SLIDING WINDOW Concept
+class Solution_2{
+    public:
+    ListNode* solve(ListNode* first, ListNode* second){
+
+        ListNode* curr1 = first;
+        ListNode* next1 = curr1 -> next;
+        ListNode* curr2 = second;
+        ListNode* next2 = curr2 -> next;
+
+        while(next1 and curr2){
+            if(curr2 -> val < next1 -> val and curr2 -> val > curr1 -> val){
+                curr1 -> next = curr2;
+                curr2 -> next = next1;
+
+                //updating curr1 and curr2;
+                curr1 = curr2;
+                curr2 = next2;
+            }
+            else{
+                curr1 = next1;
+                next1 = next1 -> next;
+                
+                if(next1 == NULL){
+                    curr1 -> next = curr2;
+                    return first;
+                }
+            }
+        }
+
+    }
+
+    ListNode* merge_sorted_LL(ListNode* head1, ListNode* head2){
+        
+        if(head1 == NULL) return head2;
+        if(head2 == NULL) return head1;
+        
+        if(head1 -> next == NULL) {
+            head1 -> next = head2;
+            return head1;
+        }
+
+        ListNode* ans = head1;
+
+        if(head1 -> val >= head2 -> val) ans = solve(head1, head2);
+        else ans = solve(head2, head1);
+
+        return ans;
+    }
+};
+
 int main() {
+    
 
 
 return 0;

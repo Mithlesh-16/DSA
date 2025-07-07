@@ -1,4 +1,5 @@
 #include <iostream>
+#include <map>
 using namespace std;
 
 class ListNode{
@@ -14,13 +15,44 @@ class ListNode{
 
 };
 
-class Solution{
-    public:
-    ListNode* solve(ListNode* head){
-        
-    }
+// By using Map method
+// Time complexity : O(n)
+ListNode* remove_duplicates(ListNode* head){
+    ListNode* curr = head;
+    ListNode* prev = nullptr;
+    map <ListNode*, bool> visited;
+    while(curr){
+        if(visited[curr]) {
+            ListNode* next_next = curr -> next;
+            prev -> next = curr -> next;
+            curr -> next = NULL;
+            delete(curr);
+            curr = next_next;
+        }else{
+            prev = curr;
+            visited[curr] = 1;
+            curr = curr -> next;
+        }
 
-};
+    }
+    return head;
+}
+
+// By iterative two times each 
+// Time Complexity : O(n^2)
+ListNode* remove_duplicates_2(ListNode* head){
+    ListNode* curr = head;
+    ListNode* prev = nullptr;
+    while(curr){
+        ListNode* temp = curr -> next;
+        while(temp){
+            if(temp -> val == curr -> val) {
+                curr -> next ;
+            }
+        }
+    }
+}
+
 
 int main() {
 
