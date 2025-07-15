@@ -1,22 +1,23 @@
 #include <iostream>
 using namespace std;
 
-class Node{
+class Node
+{
     int data;
-    Node* next;
-    Node* random;
-    public:
-    Node(int x){
-        this -> data = x;
-        this -> next = nullptr;
-        this -> random = nullptr;
+    Node *next;
+    Node *random;
+
+public:
+    Node(int x)
+    {
+        this->data = x;
+        this->next = nullptr;
+        this->random = nullptr;
     }
 };
 
+int main()
+{
 
-
-int main() {
-
-
-return 0;
+    return 0;
 }
