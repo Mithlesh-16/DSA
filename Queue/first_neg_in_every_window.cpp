@@ -26,7 +26,7 @@ class Solution {
         for(int i = k; i < arr.size(); i++){
             
             //removal of elments from queue which are not in next kth group
-            if(!q.empty() and i - q.front() >= k){
+            if(!q.empty() && ( q.front() <= i - k)){
                 q.pop();
             }
             
@@ -45,6 +45,46 @@ class Solution {
     }
 };
 
+class Solution {
+  public:
+    vector<int> firstNegInt(vector<int>& arr, int k) {
+        
+        //find negative in first k size window
+        
+        deque <int> neg;
+        vector<int> ans;
+        
+        for(int i = 0; i < k and i < arr.size(); i++){
+            
+            if(arr[i] < 0){
+                neg.push_back(i);
+            }
+            
+        }
+        
+        if(neg.empty())
+            ans.push_back(0);
+        else ans.push_back(arr[neg.front()]);
+        
+        //for remaining elements
+        for(int i = k; i < arr.size(); i++){
+            
+            if(!neg.empty() && neg.front() <= i - k){
+                neg.pop_front();
+            }
+            
+            if(arr[i] < 0){
+                neg.push_back(i);
+            }
+            
+            if(neg.empty()) ans.push_back(0);
+            else ans.push_back(arr[neg.front()]);
+            
+        }
+        
+        return ans;
+    }
+};
 
 int main() {
 

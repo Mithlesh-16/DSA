@@ -5,6 +5,8 @@ int partition(int arr[], int start, int end){
 
     int pivot = arr[start];
     int count = start;
+
+    /// moving the pivot 
     for(int i = start; i <= end; i++){
         if(arr[i]<pivot) count ++;
     }
@@ -12,7 +14,7 @@ int partition(int arr[], int start, int end){
 
     //move the part of the array with elements less than the pivot to the left of the pivot
     int i = start, j = end;
-    while(i<=j){
+    while(i<j){
         if(arr[i] > pivot && arr[j] < pivot){
             swap(arr[i], arr[j]);
             i++;

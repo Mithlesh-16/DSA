@@ -7,14 +7,19 @@ void merge(int arr[], int start, int mid, int end)
     int size1 = mid - start + 1;
     int size2 = end - mid;
     int left[size1], right[size2];
+
+    ///copying both sides of arrays
     for (int i = 0; i < size1; i++)
     {
         left[i] = arr[start + i];
     }
+
     for (int i = 0; i < size2; i++)
     {
         right[i] = arr[mid + 1 + i];
     }
+
+
     int i = 0, j = 0, k = start;
     for (; k <= end && j < size2 && i < size1; k++)
     {
