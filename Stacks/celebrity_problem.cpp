@@ -3,6 +3,7 @@
 #include <stack>
 using namespace std;
 
+
 class Solution {
   public:
     int celebrity(vector<vector<int> >& mat) {

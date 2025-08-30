@@ -1,5 +1,6 @@
 #include <iostream>
 #include <queue>
+#include <stack>
 using namespace std;
 
 // node class
@@ -71,6 +72,50 @@ void level_order_traversal(node *root)
                 q.push(tmp->right);
         }
     }
+}
+
+// Reverse Level Order Traversal
+// 
+void reverse_level_order_traversal(node *root){
+    queue <node *> q;
+    stack <node *> s;
+
+    q.push(root);
+    q.push(NULL);
+
+    while(!q.empty()){
+        node *tmp = q.front();
+        s.push(tmp);
+        q.pop();
+        if(tmp == NULL){
+            if(!q.empty()){
+                q.push(NULL);
+            }
+        }
+        else{
+            if(tmp -> right){
+                q.push(tmp -> right);
+            }
+            if(tmp -> left){
+                q.push(tmp -> left);
+            }
+
+            
+        }
+    }
+
+    cout<<"Reverse Level order Traversal : ";
+    while(!s.empty()){
+        if(s.top()){
+            cout<<s.top() -> data<<" ";
+        }
+        else{
+            cout<<endl;
+        }
+        s.pop();
+    }
+
+
 }
 
 // inorder traversal
@@ -191,6 +236,9 @@ int main()
 
     cout<<"Post - Order Traversal : "<<endl;
     postOrderTraversal(root);
+    cout<<endl;
+
+    reverse_level_order_traversal(root);
     cout<<endl;
 
     return 0;
