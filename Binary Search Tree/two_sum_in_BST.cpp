@@ -1,7 +1,9 @@
-
+#include <bits/stdc++.h>
+using namespace std;
 
 // Node is as follows
 class Node {
+    public:
     int data;
     Node *left;
     Node *right;

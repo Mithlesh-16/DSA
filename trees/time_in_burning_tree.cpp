@@ -1,5 +1,6 @@
 // Q - 2385. Amount of Time for Binary Tree to Be Infected
-// You are given the root of a binary tree with unique values, && an integer start. At minute 0, an infection starts from the node with value start.
+// You are given the root of a binary tree with unique values, && an integer start. 
+// At minute 0, an infection starts from the node with value start.
 
 // Each minute, a node becomes infected if:
 

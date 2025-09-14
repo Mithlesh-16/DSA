@@ -44,7 +44,7 @@ public:
 
     void pop()
     {
-        pos--;
+        pos++;
     }
 
     int top()

@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+#include <bits/stdc++.h>
 
 //do insertion , Searching and deletion of any node in BST
 // smaller value goes to left;

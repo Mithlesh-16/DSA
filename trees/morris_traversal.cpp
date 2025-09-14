@@ -29,6 +29,8 @@ class Solution{
                 root = root -> right;
             }
             else{
+                //find inorder predecessor
+                
                 Node* curr = root -> left;
                 while(curr -> right && curr -> right != root)
                     curr = curr -> right;

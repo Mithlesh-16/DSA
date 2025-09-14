@@ -1,5 +1,4 @@
-#include <iostream>
-#include <stack>
+#include <bits/stdc++.h>
 using namespace std;
 
 void insert_at_position(stack<int> &s, int num)
