@@ -5,14 +5,11 @@ class TrieNode{
 
     public:
     char data;
-    TrieNode* children[26];
+    TrieNode* children[26] = {NULL};
     bool isTerminal;
 
     TrieNode(char data){
         this -> data = data;
-        for(int i = 0; i < 26; i++){
-            children[i] = NULL;
-        }
         isTerminal = false;
     }
 };
@@ -69,6 +66,7 @@ class Trie{
 };
 
 int main(){
+    
     Trie* t1 = new Trie();
     t1 -> insertWord(t1 -> root, "abcd");
     t1 -> insertWord(t1 ->  root, "mithlesh");

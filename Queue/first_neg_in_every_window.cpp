@@ -14,7 +14,7 @@ class Solution {
         for(int i = 0 ; i < k; i++){
             if(arr[i] < 0) 
                 q.push(i);
-            
+
         }
         
         if(!q.empty())
@@ -22,6 +22,7 @@ class Solution {
         else
             ans.push_back(0);
         
+            
         //for remaining elements
         for(int i = k; i < arr.size(); i++){
             

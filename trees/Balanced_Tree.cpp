@@ -28,6 +28,7 @@ class solution{
 
             pair<bool, int> ans;
             ans.second = max(left.second, right.second) + 1;
+
             if(left.first && right.first)
                 ans.first = abs(left.second - right.second) <= 1;
             else ans.first = false;
@@ -36,7 +37,7 @@ class solution{
         }
     
         bool isBalanced(TreeNode* root){
-            return balanced(root).second;
+            return balanced(root).first;
         }
 };
 

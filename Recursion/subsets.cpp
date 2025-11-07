@@ -9,7 +9,11 @@ void subsets(vector<int> output, vector<vector<int>> &result, int index, int arr
         result.push_back(output);
         return;
     }
+
+    //exclude
     subsets(output, result, index + 1, arr, size);
+
+    //include
     output.push_back(arr[index]);
     subsets(output, result, index + 1, arr, size);
 }

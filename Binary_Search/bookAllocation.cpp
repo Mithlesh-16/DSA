@@ -8,7 +8,8 @@ bool isPossible(vector<int> &Books, int students, int mid)
     {
         currentPages += Books[i];
 
-        if (mid < Books[i]) return false;           // Too large to be handled by any single student;
+        if (mid < Books[i])
+            return false; // Too large to be handled by any single student;
 
         if (currentPages > mid)
         {
@@ -16,10 +17,10 @@ bool isPossible(vector<int> &Books, int students, int mid)
             currentPages = Books[i];
         }
     }
-    if(studentsAlloted != students) return false;
+    if (studentsAlloted != students)
+        return false;
     return true;
 }
-
 
 int bookAllocation(vector<int> Books, int students)
 {
@@ -38,27 +39,29 @@ int bookAllocation(vector<int> Books, int students)
         {
             ans = mid;
             e = mid - 1;
-        }else{
+        }
+        else
+        {
             s = mid + 1;
         }
     }
-    cout<<ans<<endl;
+    cout << ans << endl;
     return ans;
 }
-
 
 int main()
 {
     int no_of_books = 0;
-    cin>>no_of_books;
-    vector<int> Books ;
+    cin >> no_of_books;
+    vector<int> Books;
 
-    //Taking input
-    for(int i = 0; i<no_of_books; i++){
+    // Taking input
+    for (int i = 0; i < no_of_books; i++)
+    {
         int tmp = 0;
-        cin>> tmp;
+        cin >> tmp;
         Books.push_back(tmp);
-    } 
+    }
     int students = 0;
     cin >> students;
     int ans = bookAllocation(Books, students);

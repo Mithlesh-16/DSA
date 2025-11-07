@@ -24,6 +24,7 @@ class n_stacks{
 
     bool push(int stack_num, int value){
         if(free_spot == -1) return false;
+        
         int index = free_spot;
         arr[index] = value;     //insert value
         free_spot = next[free_spot];    //update free_spot

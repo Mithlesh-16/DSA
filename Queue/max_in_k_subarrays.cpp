@@ -7,12 +7,8 @@ class Solution {
   public:
     vector<int> maxOfSubarrays(vector<int>& arr, int k) {
         
-        vector<int> ans;
-        deque<int> dq;
 
-        for(int i = 0; i < arr.size(); i++){
-            
-        }
+        
         
     }
 };

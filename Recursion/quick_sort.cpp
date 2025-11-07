@@ -20,14 +20,10 @@ int partition(int arr[], int s, int e){
             i++;
             j--;
         }
-        else if(arr[i] <= pivot && arr[j] > pivot){
-            i++;
-            j--;
-        }
-        else if(arr[i]<= pivot){
+        if(arr[i]<= pivot){
             i++;
         }
-        else if(arr[j] > pivot){
+        if(arr[j] > pivot){
             j--;
         }
     
