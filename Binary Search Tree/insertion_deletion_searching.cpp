@@ -29,8 +29,6 @@ class Solution{
             return tmp;
         }
 
-        
-
         if(val < root -> data){
             root -> left = insertion(root -> left, val);
         }
