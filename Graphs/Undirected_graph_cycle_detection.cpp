@@ -5,11 +5,11 @@ class Solution
 {
 
 public:
-
     bool isCycle(int V, vector<vector<int>> &edges)
     {
 
         queue<pair<int, int>> q;
+        // first -> node, second -> node's parent
         vector<bool> visited(V, false);
         vector<vector<int>> adj(V);
 
@@ -44,7 +44,6 @@ public:
                         }
                         if (!visited[neighbour])
                         {
-
                             visited[neighbour] = true;
                             q.push({neighbour, node});
                         }
@@ -58,14 +57,18 @@ public:
 
     bool isCycle2(int node, int parent, vector<bool> &visited, vector<vector<int>> &adj)
     {
-        
+
         visited[node] = true;
 
-        for(auto neighbour: adj[node]){
-            if(!visited[neighbour]){
-                if(isCycle2(neighbour, node, visited, adj)) return true;
+        for (auto neighbour : adj[node])
+        {
+            if (!visited[neighbour])
+            {
+                if (isCycle2(neighbour, node, visited, adj))
+                    return true;
             }
-            else if(parent != neighbour){
+            else if (parent != neighbour)
+            {
                 return true;
             }
         }
@@ -87,13 +90,14 @@ public:
             adj[edges[i][1]].push_back(edges[i][0]);
         }
 
-        for(int i = 0; i < V; i++){
-            if(!visited[i]){
+        for (int i = 0; i < V; i++)
+        {
+            if (!visited[i])
+            {
                 bool ans = isCycle2(i, -1, visited, adj);
                 return ans;
             }
         }
-
 
         return false;
     }

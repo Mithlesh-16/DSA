@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Win64",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/mingw_15/mingw64/include",
+                "C:/mingw_15/mingw64/include/c++/15.1.0",
+                "C:/mingw_15/mingw64/include/c++/15.1.0/x86_64-w64-mingw32",
+                "C:/mingw_15/mingw64/include/c++/15.1.0/backward"
+            ],
+            "defines": [],
+            "compilerPath": "C:/mingw_15/mingw64/bin/g++.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}

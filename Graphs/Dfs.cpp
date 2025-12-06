@@ -10,11 +10,8 @@ void dfsUtil(map<int, vector<int>> &adj, vector<int>&ans, vector<bool> &visited,
         if(!visited[neighbour]){
             cout<<"node : "<<neighbour<<endl;
             dfsUtil(adj, ans, visited, neighbour);
-
         }
-
     }
-
     return ;
 }
 

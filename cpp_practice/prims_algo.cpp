@@ -30,7 +30,7 @@ vector<int> prims(vector<vector<int>> &edges, int V){
                     s.erase({keys[neighbour.first], neighbour.first});
                 }
                 keys[neighbour.first] = neighbour.second;
-                s.insert({keys[neighbour.first], neighbour.second});
+                s.insert({keys[neighbour.first], neighbour.first});
                 parent[neighbour.first] = node;
             }
         }

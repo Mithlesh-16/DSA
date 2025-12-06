@@ -1,7 +1,5 @@
-#include <iostream>
-using namespace std;
 #include <bits/stdc++.h>
-
+using namespace std;
 //do insertion , Searching and deletion of any node in BST
 // smaller value goes to left;
 // larger value goes to right;
@@ -152,10 +150,8 @@ class Solution{
                 root -> data = curr -> data;
                 root -> right = deleteNode(root -> right, curr -> data);
         }
-
         return root;
     }
-    
 
 };
 

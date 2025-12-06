@@ -23,7 +23,7 @@ public:
         else if(key > root -> val){
             root -> right = deleteNode(root -> right, key);
         }
-        else if(key == root -> val){
+        else{
             // 0 Child
             if(!root -> left and !root -> right){
                 return NULL;

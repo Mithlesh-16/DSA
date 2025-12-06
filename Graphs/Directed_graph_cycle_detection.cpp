@@ -21,10 +21,8 @@ bool detect_cycle(map<int, vector<int>> &adj, int node, vector<bool> &visited, v
             return true;
         }
     }
-
     dfsVisited[node] = false;
     return false;
-
 }
 
 bool detect_cycle_using_dfs(vector<vector<int>> &edges, int v)
@@ -53,7 +51,6 @@ bool detect_cycle_using_dfs(vector<vector<int>> &edges, int v)
 
 int main()
 {
-
     vector<vector<int>> edges = {{0, 1}, {1, 2}, {2, 0}, {2, 3}};
     cout<<detect_cycle_using_dfs(edges, 4)<<endl;
 
