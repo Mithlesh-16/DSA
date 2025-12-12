@@ -1,6 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// works good for both directed as well as undirected graph
+// does not work for negative weights 
+
+
 vector<int> dijkstra(int n, vector<vector<int>> &edges) {
     // Build adjacency list
     unordered_map<int, vector<pair<int,int>>> adj;

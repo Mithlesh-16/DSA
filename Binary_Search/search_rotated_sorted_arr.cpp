@@ -28,7 +28,7 @@ public:
             }
             //right part sorted
             else{
-                if(target > nums[mid] and target <= nums[end] ) start = mid + 1;
+                if(target <= nums[end] and target > nums[mid]) start = mid + 1;
                 else end = mid -1;
             }
         }
