@@ -116,6 +116,35 @@ class Solution_2{
 
     }
 
+    ListNode* solve(ListNode* first, ListNode* second){
+
+        ListNode* head = NULL;
+        ListNode* curr_head = head;
+        ListNode* curr1 = first;
+        ListNode* curr2 = second;
+
+        while(curr1 and curr2){
+            if(curr1 -> val <= curr2 -> val){
+                if(!head) head = curr1;
+                curr_head = curr1;
+
+                curr1 = curr1 -> next;
+            }else{
+                if(!head) head = curr2;
+
+                curr_head = curr2;
+                curr2 = curr2 -> next;
+            }
+        }
+        if(curr1){
+            curr_head -> next = curr1;
+        }
+        if(curr2){
+            curr_head -> next = curr2;
+        }
+        return head;
+    }
+
     ListNode* merge_sorted_LL(ListNode* head1, ListNode* head2){
         
         if(head1 == NULL) return head2;
