@@ -54,7 +54,6 @@ class Solution {
         if(preorder[index] > maxi) return NULL;
 
         TreeNode* root = new TreeNode(preorder[index++]);
-        if (index < preorder.size()){
             root->left = solve(preorder, index, root -> val);
             root->right = solve(preorder, index, maxi);
         }
